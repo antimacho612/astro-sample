@@ -2,6 +2,10 @@
 title: Example Reference
 description: A reference page in my new Starlight docs site.
 ---
+import Variables from '../../../components/Variables.astro';
+
+<Variables color="red" />
+<Variables color="blue" />
 
 Reference pages are ideal for outlining how things work in terse and clear terms.
 Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
@@ -9,3 +13,14 @@ Less concerned with telling a story or addressing a specific use case, they shou
 ## Further reading
 
 - Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+
+```css title="my-test-file.js"
+@font-face {
+  font-family: 'カスタムフォント';
+  /* ローカルフォントファイルへの相対パスを`url()`で指定します。 */
+  src: url('./CustomFont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+```

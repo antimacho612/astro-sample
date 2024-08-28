@@ -1,0 +1,38 @@
+---
+const { label, disabled, rounded } = Astro.props;
+---
+
+<div class="not-content preview" style="padding: .5rem;">
+  {
+    () => {
+      if (rounded) {
+        return (
+          <button type="button" class="btn btn-rounded">
+            ★
+          </button>
+        );
+      } else {
+        return (
+          <button type="button" class="btn" disabled={disabled}>
+            {label}
+          </button>
+        );
+      }
+    }
+  }
+  {rounded && <div>丸い</div>}
+  {disabled ? <div>disabledです</div> : <div>disabledじゃないです</div>}
+</div>
+
+<style lang="scss">
+  .btn {
+    padding: 0.5rem 1rem;
+
+    &.btn-rounded {
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+      border-radius: 50%;
+    }
+  }
+</style>
